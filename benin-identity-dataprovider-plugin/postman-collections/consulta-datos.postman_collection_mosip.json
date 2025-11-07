@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "0cce776c-cd08-4aaf-bd31-5d809e9fae84",
+		"name": "consulta datos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "consulta datos Copy",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:end=\"http://endpoint.wsconsultadni.reniec.gob.pe/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <end:consultar>\r\n         <arg0>\r\n            <!--Optional:-->\r\n            <nuDniConsulta>12345678</nuDniConsulta>\r\n            <!--Optional:-->\r\n            <nuDniUsuario>12345678</nuDniUsuario>\r\n            <!--Optional:-->\r\n            <nuRucUsuario>12345678901</nuRucUsuario>\r\n            <!--Optional:-->\r\n            <password>12345678</password>\r\n         </arg0>\r\n      </end:consultar>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://srel.reniec.gob.pe/consultadnie/ConsultaDniService?WSDL",
+					"protocol": "https",
+					"host": [
+						"srel",
+						"reniec",
+						"gob",
+						"pe"
+					],
+					"path": [
+						"consultadnie",
+						"ConsultaDniService"
+					],
+					"query": [
+						{
+							"key": "WSDL",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
